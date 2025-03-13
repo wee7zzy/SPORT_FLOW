@@ -8,7 +8,9 @@ public class DBcnx {
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+        Class.forName("com.mysql.cj.jdbc.Driver"); // Charger le driver
+
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }

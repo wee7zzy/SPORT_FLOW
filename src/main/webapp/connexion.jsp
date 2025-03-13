@@ -15,7 +15,7 @@
             <h1 class="text-2xl font-bold">🏋️ Gym Pro</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="hover:text-gray-400">Accueil</a></li>
+                    <li><a href="index.jsp" class="hover:text-gray-400">Accueil</a></li>
                     <li><a href="#about" class="hover:text-gray-400">À propos</a></li>
                     <li><a href="#services" class="hover:text-gray-400">Services</a></li>
                     <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
@@ -32,7 +32,7 @@
        style="background-image: url('image/pexels-karolina-grabowska-4046792.jpg');">
        <div class="bg-black bg-opacity-50 p-10 rounded-xl w-[400px] mb-6">
            <h2 class="text-3xl font-bold mb-4">Log in :</h2>
-           <form action="inscriptionServlet" method="POST" class="space-y-4">
+           <form action="connecterServlet" method="POST" class="space-y-4">
 
 
                <!-- Champ Email -->

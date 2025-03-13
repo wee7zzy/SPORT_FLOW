@@ -15,7 +15,7 @@
             <h1 class="text-2xl font-bold">🏋️ Gym Pro</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="hover:text-gray-400">Accueil</a></li>
+                    <li><a href="index.jsp" class="hover:text-gray-400">Accueil</a></li>
                     <li><a href="#about" class="hover:text-gray-400">À propos</a></li>
                     <li><a href="#services" class="hover:text-gray-400">Services</a></li>
                     <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>

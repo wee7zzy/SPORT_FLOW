@@ -15,11 +15,11 @@
             <h1 class="text-2xl font-bold">🏋️ Gym Pro</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="hover:text-gray-400">Accueil</a></li>
+                    <li><a href="index.jsp" class="hover:text-gray-400">Accueil</a></li>
                     <li><a href="#about" class="hover:text-gray-400">À propos</a></li>
                     <li><a href="#services" class="hover:text-gray-400">Services</a></li>
                     <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
-                    <li><a href="connection.jsp" class="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600">Connexion</a></li>
+                    <li><a href="connexion.jsp" class="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600">Connexion</a></li>
                     <li><a href="inscription.jsp" class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">S'inscrire</a></li>
                 </ul>
             </nav>
