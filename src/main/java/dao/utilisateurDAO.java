@@ -3,6 +3,8 @@ package dao;
 import model.utilisateurs;
 import utils.DBcnx;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class utilisateurDAO {
@@ -56,6 +58,53 @@ public class utilisateurDAO {
         }
         return null;
     }
+
+    public List<utilisateurs> getCoachesForClient(String clientName) {
+        List<utilisateurs> coaches = new ArrayList<>();
+        String sql = "SELECT id, nom, email, role FROM utilisateurs WHERE role = 'entraineur'";
+
+        try (Connection cnx = DBcnx.getConnection();
+             PreparedStatement stmt = cnx.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                utilisateurs coach = new utilisateurs();
+                coach.setId(rs.getInt("id"));
+                coach.setNom(rs.getString("nom"));
+                coach.setEmail(rs.getString("email"));
+                coach.setRole(rs.getString("role"));
+                coaches.add(coach);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return coaches;
+    }
+
+    public List<utilisateurs> getClientsForCoach(String coachName) {
+        List<utilisateurs> coaches = new ArrayList<>();
+        String sql = "SELECT id, nom, email, role FROM utilisateurs WHERE role = 'client'";
+
+        try (Connection cnx = DBcnx.getConnection();
+             PreparedStatement stmt = cnx.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                utilisateurs coach = new utilisateurs();
+                coach.setId(rs.getInt("id"));
+                coach.setNom(rs.getString("nom"));
+                coach.setEmail(rs.getString("email"));
+                coach.setRole(rs.getString("role"));
+                coaches.add(coach);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return coaches;
+    }
+
+
+
 
 
 }
